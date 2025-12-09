@@ -6,6 +6,9 @@
   font-family: "Poppins", sans-serif;
   color: rgb(187, 227, 249);
   width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
   text-align: center;
 
   background-image: 
@@ -20,13 +23,13 @@
   color: rgb(250, 252, 253);
 }
 .hours {
-  width: 1000px;           
+  width: 90%;           
+  max-width: 1000px;
   height: 350px;         
   overflow: hidden;     
-  margin-left: 5%;
-  margin-right: 5%;        
-  border-radius: 16px;    
-  /* background: rgba(0, 0, 0, 0.2);  */
+  margin: 0 auto;        
+  border-radius: 16px;
+  box-sizing: border-box;    
   display: flex;
   align-items: center;    
   justify-content: flex-start;
@@ -40,8 +43,13 @@
   overflow-y: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  padding:2px;
+  padding: 2px;
+  width: 100%;
+  box-sizing: border-box;
+}
 
+.hourly-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 .hour-item {
@@ -176,6 +184,19 @@
     font-size: 14px;
   }
 
+  .hours {
+    width: 95%;
+    height: 300px;
+  }
+
+  .hourly-scroll {
+    height: 250px;
+  }
+
+  .hour-item {
+    min-width: 130px;
+  }
+
   .forecast-item {
     width: 140px;
     padding: 15px;
@@ -188,9 +209,8 @@
 
 
 @media (max-width: 480px) {
-
   .forecast-page {
-    padding: 10px;
+    padding: 10px 5px;
   }
 
   .forecast-page h1 {
@@ -220,6 +240,21 @@
 
   .current-details p {
     font-size: 13px;
+  }
+
+  .hours {
+    width: 100%;
+    height: 260px;
+  }
+
+  .hourly-scroll {
+    height: 220px;
+    gap: 10px;
+  }
+
+  .hour-item {
+    min-width: 110px;
+    font-size: 14px;
   }
 
   .forecast-list {
